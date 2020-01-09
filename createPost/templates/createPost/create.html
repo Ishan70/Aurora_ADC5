@@ -1,0 +1,18 @@
+create
+<br>
+{% for p in posts %}
+    <a href="#"> {{p.post_title}}</a>
+    <br>
+{% endfor %}
+
+
+<form method="POST" id="form1">
+    {% csrf_token %}
+    Title: <input type="text" name="title"> <br>
+    Content:
+    <br>
+    <textarea rows="4" cols="50" name="content">
+    </textarea>
+    <br>
+    <button type="submit"> Submit </button>
+</form>
